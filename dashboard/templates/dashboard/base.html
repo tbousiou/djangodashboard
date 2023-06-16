@@ -1,0 +1,56 @@
+{% load static %}
+{% load bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        
+        {# Load CSS and JavaScript #}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        
+        <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous" defer></script>
+        <script src="{% static 'dashboard/js/sidebar-toggle.js' %}" defer></script>
+    </head>
+    <body class="sb-nav-fixed">
+        
+        {% include 'dashboard/navbar.html' %}
+
+        <div id="layoutSidenav">
+
+            {% include 'dashboard/sidebar.html' %}
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        
+        
+                        {% block content %}{% endblock content %}
+                        
+                    </div>
+                </main>
+                
+                {% include 'dashboard/footer.html' %}
+
+            </div>
+        </div>
+       
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
