@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Third party packages
-    'bootstrap5',
+    'django_bootstrap5',
     # Project apps
     'accounts',
     'dashboard',
